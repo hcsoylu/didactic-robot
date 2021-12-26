@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "../store";
 import { Todo } from "../model";
 import { changeItemStatus, deleteItem } from "../features/todoSlice";
 import TrashIcon from "./Icons/Trashıcon";
+import CheckIcon from "./Icons/CheckIcon";
 
 const Main = () => {
   const state = useAppSelector((state) => state.todos);
@@ -65,7 +66,11 @@ const Main = () => {
                                 {...provided.dragHandleProps}
                               >
                                 <span className="task-itself">{item.name}</span>
-                                {item.date && <small>{item.date}</small>}
+                                {key !== "done" ? (
+                                  <small>{item.date}</small>
+                                ) : (
+                                  <CheckIcon />
+                                )}
                                 <span
                                   className="trash"
                                   onClick={() => onDeleteItem(item.id, key)}

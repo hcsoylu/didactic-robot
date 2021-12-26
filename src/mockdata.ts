@@ -2,6 +2,7 @@ export const todoMock = [
   {
     id: "1000",
     name: "Learn Golang",
+    date: "01/20/2022 - 5:10 PM",
   },
   {
     id: "1010",
@@ -10,6 +11,7 @@ export const todoMock = [
   {
     id: "1020",
     name: "Learn SvelteKit",
+    date: "02/20/2022 - 4:10 PM",
   },
 ];
 
@@ -17,6 +19,7 @@ export const doingMock = [
   {
     id: "2000",
     name: "Learn React Native",
+    date: "01/20/2022 - 4:10 PM",
   },
   {
     id: "2010",
